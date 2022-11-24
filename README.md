@@ -1,38 +1,27 @@
 # Movie-Search-App
 
+#### TP-Javascript - Movie Search App - 2022 [Diginamic](https://www.diginamic.fr/)
+
 ## 1. Introduction
 
-This is a simple movie search app that uses the [OMDb API](http://www.omdbapi.com/) to search for movies and display the results. The app is built using JavaScript.
+Ce site permet de rechercher des films et d'afficher les résultats.
 
-## 2. How it's built ?
+## 2. Comment est il construit ?
 
-The app is built using HTML, CSS and JavaScript. The app uses the [OMDb API](http://www.omdbapi.com/) to search for movies and display the results. The app is built using JavaScript.
+Il est construit en HTML, CSS & JavaScript avec l'utilisation de l'API [TMDB API](https://developers.themoviedb.org/3).
 
-- Create a new folder and name it `movie-search-app`.
+## 3. Comment l'utiliser ?
 
-```bash
-mkdir movie-search-app
-```
+A l'arrivée sur le site, les films populaires du moment sont affichés. Il est possible de rechercher un film en tapant son nom dans la barre de recherche et de cliquer sur le bouton "Rechercher" ou de taper sur la touche "Entrée" de son clavier.
 
-- Create the news files and folders.
+## 4. Comment le lancer ?
 
-```bash
-touch index.html && mkdir css && touch css/style.css
-```
+Il suffit de télécharger le dossier et de l'ouvrir dans un navigateur.
 
-## 3.How to use
+## 5. Comment contribuer ?
 
-To use the app, simply type in the name of the movie you want to search for in the search bar and click the search button. The results will be displayed below the search bar.
-
-## 4. How to run
-
-To run the app, simply open the `index.html` file in your browser.
-
-## 5. How to contribute
-
-To contribute to the app, fork the repository, make your changes and submit a pull request.
+Il est possible de contribuer en proposant des améliorations ou des corrections. Pour cela, il suffit de faire un fork du répertoire, apportez vos modifications et soumettez une pull request.
 
 ## 6. License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
