@@ -39,6 +39,11 @@ h1 {
     font-family: inherit;
 }
 
+#btnSearch:hover{
+    background-color: var(--primary-color);
+    color: white;
+}
+
 .search:focus {
     outline: 0;
     background-color: var(--primary-color);
@@ -127,5 +132,10 @@ main {
         flex-direction: column;
         width: 100%;
     }
+    button{
+        width: 100%;
+        margin-top: 1rem;
+    }
+
 
 }

@@ -5,6 +5,12 @@ const BASE_URL = 'https://api.themoviedb.org/3';  // Base URL pour les requêtes
 const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&' + API_KEY + LANG; // URL pour les films populaires
 const IMG_URL = 'https://image.tmdb.org/t/p/w500'; // URL pour les images
 const searchURL = BASE_URL + '/search/movie?' + API_KEY + LANG; // URL pour la recherche
+const genres = [
+  {
+    "id": 28,
+    "name": "💪 Action"
+  }
+]
 
 const main = document.getElementById('main'); // Récupère l'élément main
 const form = document.getElementById('form'); // Récupère l'élément form
@@ -51,7 +57,7 @@ function showMovies(data) {
 
     main.appendChild(movieEl);
 
-    
+
   })
 }
 
@@ -70,10 +76,10 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const searchTerm = search.value;
-  if(searchTerm) {
-      getMovies(searchURL+'&query='+searchTerm)
-  }else{
-      getMovies(API_URL);
+  if (searchTerm) {
+    getMovies(searchURL + '&query=' + searchTerm)
+  } else {
+    getMovies(API_URL);
   }
 
 })
