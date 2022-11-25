@@ -20,6 +20,12 @@ Il est construit en HTML, CSS & JavaScript avec l'utilisation de l'API [TMDB API
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
+### Et Responsive testé avec 
+
+[UI.dev](https://ui.dev/amiresponsive?url=https://movie-search-app.mtdevweb.com)
+
+![Test Responsivité](img/responsive.png)
+
 ## 3. Comment l'utiliser ?
 
 A l'arrivée sur le site, les films populaires du moment sont affichés. Il est possible de rechercher un film en tapant son nom dans la barre de recherche et de cliquer sur le bouton "Rechercher" ou de taper sur la touche "Entrée" de son clavier.
