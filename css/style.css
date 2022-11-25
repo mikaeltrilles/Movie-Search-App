@@ -122,7 +122,6 @@ main {
     color: lightgreen;
 }
 
-
 .movie-info span.orange {
     color: orange;
 }
@@ -165,15 +164,12 @@ main {
     font-size: 0.8rem;
     font-weight: bold;
     text-transform: uppercase;
-
-
 }
 
 .vig {
     display: flex;
     flex-direction: row;
 }
-
 
 /** Mobile first */
 @media (width <=800px) {
@@ -187,6 +183,4 @@ main {
         margin-top: 1rem;
         width: 100%;
     }
-
-
 }

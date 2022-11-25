@@ -6,6 +6,7 @@ const BASE_URL_MOVIE = 'https://www.themoviedb.org/movie/';  // Base URL pour le
 const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&' + API_KEY + LANG; // URL pour les films populaires
 const IMG_URL = 'https://image.tmdb.org/t/p/w500'; // URL pour les images
 const searchURL = BASE_URL + '/search/movie?' + API_KEY + LANG; // URL pour la recherche
+
 const genres = [
   {
     "id": 28,
@@ -102,12 +103,10 @@ function getMovies(url) { // Fonction pour récupérer les films
   })
 }
 
-
 function showMovies(data) { // Fonction pour afficher les films
   main.innerHTML = '';  // Vide le contenu de l'élément main
   const movieGenres = [];
   data.forEach(movie => { // Pour chaque film
-
     const { original_title, poster_path, vote_average, overview, id } = movie;  // Récupère les données 
     //Pour chaque film, je crée un  tableau avec en index l'id du film et en valeur un tableau avec la correespondance entre l'id du genre et le nom du genre grace au tableau genres 
     movie.genre_ids.forEach(genre => {
@@ -120,18 +119,15 @@ function showMovies(data) { // Fonction pour afficher les films
     // Modifie l'html
     movieEl.innerHTML = `
     <img src="${poster_path ? IMG_URL + poster_path : "https://images.unsplash.com/photo-1609743522653-52354461eb27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"}" alt="${original_title}">
-
           <div class="movie-info">
             <h3>${original_title}</h3>
               <span class="${getColor(vote_average)}">${vote_average}</span>
           </div>
-
           <div class="overview">
           <!-- Affiche toutes les valeurs du tableau movieGenres en fonction de l'id du film grace au join du tableau -->
           <div>
           <h3 class="tagRo">Genres</h3>
           <p class="tag">${movieGenres[id].join(' • ')}</p>
-          
           </div>
           <h3 class="tagRo">Synopsis</h3>
           <p>${overview.split(' ', 40).join(' ')}...</p>
@@ -154,12 +150,10 @@ function getColor(vote) {
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-
   const searchTerm = search.value;
   if (searchTerm) {
     getMovies(searchURL + '&query=' + searchTerm)
   } else {
     getMovies(API_URL);
   }
-
 })
